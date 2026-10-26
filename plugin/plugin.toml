@@ -1,0 +1,68 @@
+id          = "me/word-of-the-day"   # change "me" to your own handle
+name        = "Word of the Day"
+version     = "0.1.0"
+plugin_api  = 24                      # 24 = argv form of noctalia.runAsync
+author      = "me"
+license     = "MIT"
+icon        = "language"
+description = "A new vocabulary word every day (bar + desktop widget), powered by a Go helper (wotd)."
+tags        = ["language", "vocabulary"]
+dependencies = ["wotd"]               # the Go binary, see README
+
+[[setting]]
+key             = "word_lang"
+type            = "select"
+label_key       = "settings.word_lang.label"
+description_key = "settings.word_lang.description"
+default         = "es"
+options = [
+  { value = "en", label_key = "lang.en" },
+  { value = "es", label_key = "lang.es" },
+  { value = "fr", label_key = "lang.fr" },
+  { value = "de", label_key = "lang.de" },
+  { value = "it", label_key = "lang.it" },
+  { value = "pt", label_key = "lang.pt" },
+  { value = "nl", label_key = "lang.nl" },
+  { value = "sv", label_key = "lang.sv" },
+  { value = "pl", label_key = "lang.pl" },
+  { value = "ru", label_key = "lang.ru" },
+  { value = "tr", label_key = "lang.tr" },
+  { value = "ro", label_key = "lang.ro" },
+]
+
+[[setting]]
+key             = "meaning_lang"
+type            = "select"
+label_key       = "settings.meaning_lang.label"
+description_key = "settings.meaning_lang.description"
+default         = "en"
+options = [
+  { value = "en", label_key = "lang.en" },
+  { value = "es", label_key = "lang.es" },
+  { value = "fr", label_key = "lang.fr" },
+  { value = "de", label_key = "lang.de" },
+  { value = "it", label_key = "lang.it" },
+  { value = "pt", label_key = "lang.pt" },
+  { value = "nl", label_key = "lang.nl" },
+  { value = "sv", label_key = "lang.sv" },
+  { value = "pl", label_key = "lang.pl" },
+  { value = "ru", label_key = "lang.ru" },
+  { value = "tr", label_key = "lang.tr" },
+  { value = "ro", label_key = "lang.ro" },
+]
+
+[[setting]]
+key             = "binary"
+type            = "string"
+label_key       = "settings.binary.label"
+description_key = "settings.binary.description"
+default         = "~/.local/bin/wotd"
+advanced        = true
+
+[[widget]]
+id    = "wotd"
+entry = "widget.luau"
+
+[[desktop_widget]]
+id    = "wotd-desktop"
+entry = "desktop.luau"

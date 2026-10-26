@@ -1,0 +1,21 @@
+{
+  "settings.word_lang.label": "Word language",
+  "settings.word_lang.description": "Language the daily word is picked from.",
+  "settings.meaning_lang.label": "Meaning language",
+  "settings.meaning_lang.description": "Language the meaning is shown in. Same as the word language = a definition; different = a translation.",
+  "settings.binary.label": "wotd binary",
+  "settings.binary.description": "Path to the Go helper.",
+
+  "lang.en": "English",
+  "lang.es": "Spanish",
+  "lang.fr": "French",
+  "lang.de": "German",
+  "lang.it": "Italian",
+  "lang.pt": "Portuguese",
+  "lang.nl": "Dutch",
+  "lang.sv": "Swedish",
+  "lang.pl": "Polish",
+  "lang.ru": "Russian",
+  "lang.tr": "Turkish",
+  "lang.ro": "Romanian"
+}
